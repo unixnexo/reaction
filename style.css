@@ -1,0 +1,42 @@
+body {
+    background-color: #1D232A;
+    color: whitesmoke; 
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 20px;
+}
+
+button, ul li, span {
+    background-color: #14191e; 
+    font-size: larger;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+/*****/
+
+/* ripple */
+span.ripple {
+    position: absolute; 
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple .8s linear;
+    background-color: rgba(128, 128, 128, 0.533);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
