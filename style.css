@@ -6,6 +6,7 @@ body {
     justify-items: center;
     align-items: center;
     margin: 20px;
+    /* color: rgba(128, 128, 128, 0.111); */
 }
 
 button, ul li, span {
