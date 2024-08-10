@@ -120,8 +120,8 @@ if (coloredElements.length !== 0) {
 }
 
 
-// enable hover
-if (document.body.hasAttribute('enable-hover-reaction')) {
+// enable hover effect - only supported devices
+if (document.body.hasAttribute('enable-hover-reaction') && window.matchMedia('(hover: hover)').matches) {
   function hoverEffect(el) {
     const userPreferenceHoverColor = document.body.getAttribute('data-reaction-hover') || 'rgba(128, 128, 128, 0.111)';
     const initialBgColor = window.getComputedStyle(el).backgroundColor;
