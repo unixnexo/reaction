@@ -584,12 +584,31 @@ video {
   display: inline-block;
 }
 
+.inline{
+  display: inline;
+}
+
 .flex{
   display: flex;
 }
 
 .hidden{
   display: none;
+}
+
+.size-6{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.size-2{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.size-3{
+  width: 0.75rem;
+  height: 0.75rem;
 }
 
 .min-h-screen{
@@ -766,12 +785,20 @@ span.ripple {
   display: inline-block;
 }
 
+.\*\:inline > *{
+  display: inline;
+}
+
 .\*\:w-20 > *{
   width: 5rem;
 }
 
 .\*\:w-3\/4 > *{
   width: 75%;
+}
+
+.\*\:w-52 > *{
+  width: 13rem;
 }
 
 .\*\:border > *{
@@ -789,6 +816,10 @@ span.ripple {
 
 .\*\:p-3 > *{
   padding: 0.75rem;
+}
+
+.\*\:text-center > *{
+  text-align: center;
 }
 
 .\*\:leading-6 > *{
