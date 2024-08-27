@@ -8,7 +8,7 @@
 </head>
 <body class="bg-white nerko-one-regular" data-reaction-color="rgb(255 255 255 / 0.6)" data-reaction-duration=".6s">
     
-    <main class="flex flex-col justify-center items-center min-h-screen *:w-3/4">
+    <main id="main" class="flex flex-col justify-center items-center min-h-screen *:w-3/4">
 
         <!-- home - section 1 -->
         <section id="home" class="section">
@@ -20,7 +20,7 @@
         </section>
 
         <!-- demo - section 2 -->
-        <section id="demo" class="section hidden text-xl">
+        <section id="demo" class="section text-xl">
             <!-- select effect -->
             <form id="select-effect-form">
                 <select class="border border-black">
@@ -51,5 +51,12 @@
 
     <script defer src="./src/js/script.js"></script>
     <script defer src="./src/js/reaction.js"></script>
+    <!-- auto animation formkit library -->
+    <script type="module">
+        import autoAnimate from './src/js/auto-animate-formkit.js'
+        document.addEventListener('DOMContentLoaded', () => {
+            autoAnimate(document.getElementById('main'));
+        })
+    </script>
 </body>
 </html>
