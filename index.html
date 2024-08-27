@@ -22,14 +22,20 @@
         <!-- demo - section 2 -->
         <section id="demo" class="section hidden text-xl">
             <!-- select effect -->
-            <form>
+            <form id="select-effect-form">
                 <select class="border border-black">
                     <option selected disabled>Choose effect</option>
-                    <option value="">Ripple effect</option>
-                    <option value="">Push effect</option>
-                    <option value="">Background effect</option>
+                    <option value="ripple">Ripple effect</option>
+                    <option value="push">Push effect</option>
+                    <option value="color">Color effect</option>
                 </select>
             </form>
+            <!-- demo btns -->
+            <div id="demo-btns-wrapper" class="*:p-3 mt-5 *:inline-block">
+                <button class="bg-black text-white rounded-lg">I'm a btn</button>
+                <a href="#" class="bg-purple-600">I'm a link</a>
+                <div class="border border-blue-600 rounded-full">I'm a div</div>
+            </div>
         </section>
 
         <!-- navigation btns -->
@@ -43,7 +49,7 @@
     </main>
 
 
-    <script defer src="./source code/reaction.js"></script>
     <script defer src="./src/js/script.js"></script>
+    <script defer src="./src/js/reaction.js"></script>
 </body>
 </html>

@@ -62,9 +62,9 @@ if (pushedElements.length !== 0) {
   const endScale = `scale(${upScale})`;
 
   pushedElements.forEach(el => {
+
     el.style.willChange = 'transform';
-    el.style.transition = 'transform .1s ease-in-out';
-    el.style.transition = 'background .2s ease-in-out';
+    el.style.transition = 'transform .1s ease-in-out, background .2s ease-in-out';
 
     const presStart = () => {
       el.style.transform = startScale;
@@ -145,4 +145,3 @@ if (document.body.hasAttribute('enable-hover-reaction') && window.matchMedia('(h
   });
 
 }
-
