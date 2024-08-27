@@ -11,16 +11,29 @@
     <main class="flex flex-col justify-center items-center min-h-screen *:w-3/4">
 
         <!-- home - section 1 -->
-        <section>
+        <section id="home" class="section">
             <h1 class="text-8xl">Reaction</h1>
             <div class="*:leading-6">
                 <h2 class="text-3xl">show reaction on user click/touch</h2>
-                <h3 class="text-lg">10KB & no dependency</h3>
+                <h3 class="text-lg">10KB & no dependency, pure css & js</h3>
             </div>
         </section>
 
+        <!-- demo - section 2 -->
+        <section id="demo" class="section hidden text-xl">
+            <!-- select effect -->
+            <form>
+                <select class="border border-black">
+                    <option selected disabled>Choose effect</option>
+                    <option value="">Ripple effect</option>
+                    <option value="">Push effect</option>
+                    <option value="">Background effect</option>
+                </select>
+            </form>
+        </section>
+
         <!-- navigation btns -->
-        <nav class="mt-10 space-x-2 text-xl *:border *:border-black *:w-20 *:bg-transparent *:text-black hover:*:bg-black hover:*:text-white">
+        <nav id="nav" class="mt-10 space-x-2 text-xl *:border *:border-black *:w-20 *:bg-transparent *:text-black hover:*:bg-black hover:*:text-white">
             <button class="push-reaction-effect">home</button>
             <button class="push-reaction-effect">demo</button>
             <button class="push-reaction-effect">use</button>
@@ -31,5 +44,6 @@
 
 
     <script defer src="./source code/reaction.js"></script>
+    <script defer src="./src/js/script.js"></script>
 </body>
 </html>
