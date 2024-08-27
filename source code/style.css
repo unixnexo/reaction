@@ -5,7 +5,8 @@ body {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
     /* color: rgba(128, 128, 128, 0.111); */
 }
 
@@ -16,6 +17,7 @@ button, ul li, span {
     color: white;
     border: none;
     padding: 10px 20px;
+    /* margin: 20px; */
 }
 
 ul {
@@ -40,4 +42,8 @@ span.ripple {
         transform: scale(4);
         opacity: 0;
     }
+}
+
+* {
+    box-sizing: border-box;
 }

@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reaction</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/css/output.css">
+    <title>Reaction - Tiny library to show reactionit</title>
 </head>
-<body enable-hover-reaction data-reaction-hover="rgba(128, 128, 128, 0.111)" data-reaction-color="rgba(128, 128, 128, 0.533)" data-reaction-duration=".8s" data-reaction-startPush="0.9" data-reaction-endPush="1" data-reaction-bg-color="gray">
-
-    <button class="ripple-reaction-effect">hi mom</button>
-    <ul>
-        <li class="push-reaction-effect">hi mom</li>
-    </ul>
-    <span class="color-reaction-effect">hi mom</span>
-
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<body class="bg-white nerko-one-regular" data-reaction-color="rgb(255 255 255 / 0.6)" data-reaction-duration=".6s">
     
-    <script defer src="reaction.js"></script>
+    <main class="flex flex-col justify-center items-center min-h-screen *:w-3/4">
+
+        <!-- home - section 1 -->
+        <section>
+            <h1 class="text-8xl">Reaction</h1>
+            <div class="*:leading-6">
+                <h2 class="text-3xl">show reaction on user click/touch</h2>
+                <h3 class="text-lg">10KB & no dependency</h3>
+            </div>
+        </section>
+
+        <!-- navigation btns -->
+        <nav class="mt-10 space-x-2 text-xl *:border *:border-black *:w-20 *:bg-transparent *:text-black hover:*:bg-black hover:*:text-white">
+            <button class="push-reaction-effect">home</button>
+            <button class="push-reaction-effect">demo</button>
+            <button class="push-reaction-effect">use</button>
+            <button class="push-reaction-effect">github</button>
+        </nav>
+
+    </main>
+
+
+    <script defer src="./source code/reaction.js"></script>
 </body>
 </html>
