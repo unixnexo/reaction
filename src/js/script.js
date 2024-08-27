@@ -20,6 +20,7 @@ function router() {
   } else if (window.location.href.endsWith('?demo') || window.location.href.endsWith('?demo/')) {
     removeSections();
     main.insertBefore(demo, main.firstChild);
+    document.querySelector(`#demo`).classList.remove('hidden');
   }
 }
 window.addEventListener('load', () => router());
@@ -31,6 +32,8 @@ navBtns.forEach(btn => {
     const newUrl = `${window.location.pathname}?${btn.textContent}/`;
     window.history.pushState({}, '', newUrl);
     router();
+
+    document.querySelector(`#${btn.textContent}`).classList.remove('hidden');
   });
 });
 
@@ -42,7 +45,7 @@ function createDemoBtns(effectCls) {
   const htmlContent = `
     <div class="*:p-3 *:inline-block">
       <button class="${effectCls} bg-black text-white rounded-lg">I'm a btn</button>
-      <a href="#" class="${effectCls} bg-purple-600">I'm a link</a>
+      <a href="" onclick="return false;" class="${effectCls} bg-purple-600">I'm a link</a>
       <div class="${effectCls} border border-blue-600 rounded-full">I'm a div</div>
     </div>
   `;
