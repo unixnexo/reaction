@@ -4,6 +4,7 @@
 const main = document.getElementById('main');
 const home = document.getElementById('home');
 const demo = document.getElementById('demo');
+const use = document.getElementById('use');
 
 function router() {
   // remove all sections
@@ -21,6 +22,10 @@ function router() {
     removeSections();
     main.insertBefore(demo, main.firstChild);
     document.querySelector(`#demo`).classList.remove('hidden');
+  } else if (window.location.href.endsWith('?use') || window.location.href.endsWith('?use/')) {
+    removeSections();
+    main.insertBefore(use, main.firstChild);
+    document.querySelector(`#use`).classList.remove('hidden');
   }
 }
 window.addEventListener('load', () => router());
