@@ -32,7 +32,7 @@ function reaction() {
     rippleElements.forEach(el => {
   
       el.style.transition = 'background 0.2s ease-in-out';
-      el.style.overflow = 'hidden';
+      el.style.overflow = 'clip';
       el.style.position = 'relative';
       el.style.display = 'inline-block';
       el.style.boxSizing = 'border-box';
