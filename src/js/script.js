@@ -48,7 +48,7 @@ navBtns.forEach(btn => {
  */
 function createDemoBtns(effectCls) {
   const htmlContent = `
-    <div class="*:p-3 *:inline-block">
+    <div class="*:p-3 *:inline-block *:select-none *:touch-none">
       <button class="${effectCls} bg-black text-white rounded-lg">I'm a btn</button>
       <a href="" onclick="return false;" class="${effectCls} bg-purple-600">I'm a link</a>
       <div class="${effectCls} border border-blue-600 rounded-full">I'm a div</div>

@@ -8,7 +8,7 @@
 </head>
 <body class="bg-white nerko-one-regular overflow-x-clip" data-reaction-color="rgb(255 255 255 / 0.6)" data-reaction-duration=".6s">
     
-    <main id="main" class="flex flex-col justify-center items-center min-h-screen *:w-3/4 overflow-x-clip">
+    <main id="main" class="flex flex-col justify-center items-center min-h-screen *:w-[90%] md:*:w-3/4 overflow-x-clip">
 
         <!-- home - section 1 -->
         <section id="home" class="section">
@@ -23,7 +23,7 @@
         <section id="demo" class="section text-xl hidden">
             <!-- select effect -->
             <form id="select-effect-form">
-                <select class="border border-black">
+                <select class="border border-black outline-none focus:ring focus:ring-black focus:ring-offset-2">
                     <option selected disabled>Choose effect</option>
                     <option value="ripple">Ripple effect</option>
                     <option value="push">Push effect</option>
@@ -104,7 +104,7 @@
         </section>
 
         <!-- navigation btns -->
-        <nav id="nav" class="my-10 space-x-2 text-xl *:border *:border-black *:w-20 *:bg-transparent *:inline-block *:text-center *:text-black hover:*:bg-black hover:*:text-white">
+        <nav id="nav" class="my-10 md:space-y-0 space-y-1.5 md:space-x-2 text-xl *:border *:border-black *:w-20 *:bg-transparent *:inline-block *:text-center *:text-black hover:*:bg-black hover:*:text-white">
             <button class="push-reaction-effect">home</button>
             <button class="push-reaction-effect">demo</button>
             <button class="push-reaction-effect">use</button>
@@ -126,7 +126,7 @@
         import autoAnimate from './src/js/auto-animate-formkit.js'
         document.addEventListener('DOMContentLoaded', () => {
             autoAnimate(document.getElementById('main'));
-        })
+        });
     </script>
 </body>
 </html>
