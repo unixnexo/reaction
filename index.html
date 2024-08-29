@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-clip">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/output.css">
     <title>Reaction - Tiny library to show reactionit</title>
 </head>
-<body class="bg-white nerko-one-regular" data-reaction-color="rgb(255 255 255 / 0.6)" data-reaction-duration=".6s">
+<body class="bg-white nerko-one-regular overflow-x-clip" data-reaction-color="rgb(255 255 255 / 0.6)" data-reaction-duration=".6s">
     
-    <main id="main" class="flex flex-col justify-center items-center min-h-screen *:w-3/4">
+    <main id="main" class="flex flex-col justify-center items-center min-h-screen *:w-3/4 overflow-x-clip">
 
         <!-- home - section 1 -->
         <section id="home" class="section">
@@ -38,7 +38,7 @@
         </section>
 
         <!-- use - section 3 -->
-        <section id="use" class="section hidden text-xl">
+        <section id="use" class="section hidden text-xl mt-10">
             
             <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
                 <li class="mb-10 ms-6">
@@ -62,9 +62,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>                          
                     </span>
-                    <h3 class="mb-1 text-lg font-semibold text-gray-900">Flowbite Figma v1.3.0</h3>
-                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 7th, 2021</time>
-                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
+                    <p>Link the file to your project.</p>
                 </li>
                 <li class="ms-6">
                     <span class="absolute flex items-center justify-center w-6 h-6 -start-3 bg-white">
@@ -72,16 +70,24 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>                          
                     </span>
-                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.2.2</h3>
-                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2nd, 2021</time>
-                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
+                    <p class="mb-2">Add the following CSS to your code.</p>
+                    <script src="https://gist.github.com/unixnexo/42d2f5744c132f18f423322230102129.js"></script>
+                </li>
+                <li class="ms-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 -start-3 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>                          
+                    </span>
+                    <p class="mb-2">If you wanna use the "Ripple effect", add the following CSS to your code.</p>
+                    <script src="https://gist.github.com/unixnexo/67e7a099e78facc3b3c9881c004ab33b.js"></script>
                 </li>
             </ol>
 
         </section>
 
         <!-- navigation btns -->
-        <nav id="nav" class="mt-10 space-x-2 text-xl *:border *:border-black *:w-20 *:bg-transparent *:inline-block *:text-center *:text-black hover:*:bg-black hover:*:text-white">
+        <nav id="nav" class="my-10 space-x-2 text-xl *:border *:border-black *:w-20 *:bg-transparent *:inline-block *:text-center *:text-black hover:*:bg-black hover:*:text-white">
             <button class="push-reaction-effect">home</button>
             <button class="push-reaction-effect">demo</button>
             <button class="push-reaction-effect">use</button>
