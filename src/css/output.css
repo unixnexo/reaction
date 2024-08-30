@@ -621,6 +621,10 @@ video {
   display: inline-flex;
 }
 
+.inline-grid{
+  display: inline-grid;
+}
+
 .hidden{
   display: none;
 }

@@ -30,10 +30,10 @@ if (rippleElements.length !== 0) {
   rippleElements.forEach(el => {
 
     el.style.transition = 'background 0.2s ease-in-out';
-    el.style.overflow = 'clip';
-    el.style.position = 'relative';
-    el.style.display = 'inline-block';
-    el.style.boxSizing = 'border-box';
+      el.style.overflow = 'clip';
+      el.style.position = 'relative';
+      el.style.display = 'inline-grid';
+      el.style.boxSizing = 'border-box';
 
 
     if ("ontouchstart" in document.documentElement) {
