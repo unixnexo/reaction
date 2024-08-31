@@ -30,10 +30,10 @@ if (rippleElements.length !== 0) {
   rippleElements.forEach(el => {
 
     el.style.transition = 'background 0.2s ease-in-out';
-      el.style.overflow = 'clip';
-      el.style.position = 'relative';
-      el.style.display = 'inline-grid';
-      el.style.boxSizing = 'border-box';
+    el.style.overflow = 'clip';
+    el.style.position = 'relative';
+    el.style.display = 'inline-grid';
+    el.style.boxSizing = 'border-box';
 
 
     if ("ontouchstart" in document.documentElement) {
@@ -55,64 +55,80 @@ if (rippleElements.length !== 0) {
 
 // push
 const pushedElements = document.querySelectorAll('.push-reaction-effect');
+let activePushedElement = null;
+
 if (pushedElements.length !== 0) {
   const downScale = document.body.getAttribute('data-reaction-startPush') || '0.9';
   const upScale = document.body.getAttribute('data-reaction-endPush') || '1';
   const startScale = `scale(${downScale})`;
   const endScale = `scale(${upScale})`;
 
-  pushedElements.forEach(el => {
+  const presStart = (el) => {
+    if (activePushedElement && activePushedElement !== el) {
+      activePushedElement.style.transform = endScale;
+    }
+    activePushedElement = el;
+    el.style.transform = startScale;
+  };
 
+  const presEnd = (el) => {
+    el.style.transform = endScale;
+    activePushedElement = null;
+  };
+
+  pushedElements.forEach(el => {
     el.style.willChange = 'transform';
     el.style.transition = 'transform .1s ease-in-out, background .2s ease-in-out';
 
-    const presStart = () => {
-      el.style.transform = startScale;
-    };
-    const presEnd = () => {
-      el.style.transform = endScale;
-    };
-
     // mouse
-    el.addEventListener('mousedown', presStart);
-    el.addEventListener('mouseup', presEnd)
-
+    el.addEventListener('mousedown', () => presStart(el));
+    el.addEventListener('mouseup', () => presEnd(el));
+    
     // touch
-    el.addEventListener('touchstart', () => {
-      presStart();
-      setTimeout(() => {
-        presEnd();
-      }, 200);
-    });
-
+    el.addEventListener('touchstart', () => presStart(el));
+    el.addEventListener('touchend', () => presEnd(el));
   });
 }
 
 
 // bg change
 let mouseOver = false;
+let activeColoredElement = null;
 const coloredElements = document.querySelectorAll('.color-reaction-effect');
+
 if (coloredElements.length !== 0) {
   const userPreferenceBgColor = document.body.getAttribute('data-reaction-bg-color') || 'rgba(128, 128, 128, 0.533)';
   const userPreferenceHoverColor = document.body.getAttribute('data-reaction-hover') || 'rgba(128, 128, 128, 0.111)';
   
+  const setBgColor = (el, color) => {
+    el.style.backgroundColor = color;
+  };
+  
+  const resetBgColor = (el, initialColor) => {
+    setTimeout(() => {
+      if (!mouseOver || activeColoredElement !== el) {
+        el.style.backgroundColor = initialColor;
+      } else {
+        el.style.backgroundColor = userPreferenceHoverColor;
+      }
+    }, 150);
+  };
+
   coloredElements.forEach(el => {
     const initialBgColor = window.getComputedStyle(el).backgroundColor;
     el.style.transition = 'background 0.2s ease-in-out';
 
     el.addEventListener('mousedown', () => {
-      el.style.backgroundColor = userPreferenceBgColor;
+      if (activeColoredElement && activeColoredElement !== el) {
+        resetBgColor(activeColoredElement, initialBgColor);
+      }
+      activeColoredElement = el;
+      setBgColor(el, userPreferenceBgColor);
     });
 
     el.addEventListener('mouseup', () => {
-      setTimeout(() => {
-        if (!mouseOver) {
-          el.style.backgroundColor = initialBgColor;
-        } else {
-          el.style.backgroundColor = userPreferenceHoverColor;
-        }
-      }, 150);
-      
+      resetBgColor(el, initialBgColor);
+      activeColoredElement = null;
     });
   });
 }
