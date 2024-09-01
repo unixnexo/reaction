@@ -78,4 +78,3 @@ document.querySelector('#select-effect-form').addEventListener('change', () => {
 
 
 
-
